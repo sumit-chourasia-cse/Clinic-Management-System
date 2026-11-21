@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CarePoint | Dashboard</title>
+
+    <script src="https://kit.fontawesome.com/81babe2812.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="navigation">
+
+        <div class="logo">
+            <img src="Glossy Blue Medical Cross Logo (1).png" alt="CarePoint">
+            <span>CarePoint</span>
+        </div>
+
+        <div class="nav-title">
+
+            <div class="head-title">
+                <span>Workspace</span>
+            </div>
+
+            <div class="head-elements">
+                <a class="active" href="dashboard.html">
+                    <i class="fa-solid fa-table-cells"></i>
+                    Dashboard
+                </a>
+            </div>
+
+            <div class="head-elements">
+                <a href="patient.html">
+                    <i class="fa-solid fa-user"></i>
+                    Patients
+                    <span class="nav-count" id="nav-patient-count">4</span>
+                </a>
+            </div>
+
+            <div class="head-elements">
+                <a href="appointments.html">
+                    <i class="fa-solid fa-calendar"></i>
+                    Appointments
+                </a>
+            </div>
+
+            <div class="head-elements">
+                <a href="med-records.html">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    Medical Records
+                </a>
+            </div>
+
+            <div class="head-elements">
+                <a href="schedules.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Schedules
+                </a>
+            </div>
+
+        </div>
+
+        <div class="nav-title">
+
+            <div class="head-title">
+                <span>Management</span>
+            </div>
+
+            <div class="head-elements">
+                <a href="std.html">
+                    <i class="fa-solid fa-user-nurse"></i>
+                    Staff & Doctors
+                </a>
+            </div>
+
+            <div class="head-elements">
+                <a href="reports.html">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    Reports
+                </a>
+            </div>
+
+            <div class="head-elements">
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </div>
+
+        </div>
+
+        <div class="nav-title">
+
+            
+
+        </div>
+
+    </div>
+
+
+    <!-- Main Dashboard -->
+
+    <main class="dashboard-main">
+
+        <header class="page-header" >
+
+            <div class="page-title" >
+                <p class="breadcrumb" >
+                    Workspace <span>/</span> <strong>Dashboard</strong>
+                </p>
+
+                <h1>Clinic Overview</h1>
+            </div>
+
+            <div class="header-tools">
+                <label class="search-box">
+                    <span>⌕</span>
+                    <input type="search" id="dashboard-search"
+                        placeholder="Search patients...">
+                </label>
+
+                <div class="user-profile">
+                    <div class="user-avatar" id="user-initials">CP</div>
+
+                    <div>
+                        <strong id="user-name">Clinic User</strong>
+                        <span>Clinic Administrator</span>
+                    </div>
+
+                    <button id="logout-button" type="button">
+                        Log Out
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="overview">
+
+            <!-- Greeting -->
+
+            <div class="greeting-row" >
+
+                <div>
+                    <h2>
+                        Good morning,
+                        <span id="greeting-name">there</span>
+                        <span class="sparkle">✦</span>
+                    </h2>
+
+                    <p>Here's what's happening at your clinic today.</p>
+                </div>
+
+                <div class="today-date">
+                    <span>▦</span>
+                    <time id="today-date"></time>
+                </div>
+
+            </div>
+
+
+            <!-- Statistics -->
+
+            <div class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Total Patients</span>
+                        <span class="stat-icon blue-icon">♙</span>
+                    </div>
+
+                    <strong id="patient-count">4</strong>
+
+                    <p>
+                        <b class="green-text">↗ 12.8%</b>
+                        <span>vs. last month</span>
+                    </p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Today's Appointments</span>
+                        <span class="stat-icon green-icon">▣</span>
+                    </div>
+
+                    <strong id="appointment-count">4</strong>
+
+                    <p>
+                        <b class="green-text">2 upcoming</b>
+                        <span>in the next 2 hours</span>
+                    </p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Waiting Room</span>
+                        <span class="stat-icon orange-icon">◷</span>
+                    </div>
+
+                    <strong>02</strong>
+
+                    <p>
+                        <span>Average wait</span>
+                        <b class="orange-text">14 minutes</b>
+                    </p>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-top">
+                        <span>Completed Visits</span>
+                        <span class="stat-icon pink-icon">✓</span>
+                    </div>
+
+                    <strong>2</strong>
+
+                    <p>
+                        <b class="green-text">50%</b>
+                        <span>of today's schedule</span>
+                    </p>
+
+                </article>
+
+            </div>
+
+
+            <!-- Patient and Appointment Sections -->
+
+            <div class="details-grid">
+
+                <section class="panel patients-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Recent Patients</h2>
+                            <p>Latest patient activity and visit status</p>
+                        </div>
+
+                        <a href="patient.html">
+                            View all patients →
+                        </a>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Patient ID</th>
+                                    <th>Last Visit</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="patient-list">
+
+                                <tr>
+                                    <td>
+                                        <div class="patient-cell">
+                                            <span class="patient-avatar">JD</span>
+                                            <span class="patient-details">
+                                                <strong>James Davis</strong>
+                                                <small>Male · 34 years</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>CP-1024</td>
+                                    <td>Today</td>
+                                    <td><span class="status status-completed">Completed</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="patient-cell">
+                                            <span class="patient-avatar">EW</span>
+                                            <span class="patient-details">
+                                                <strong>Emma Wilson</strong>
+                                                <small>Female · 28 years</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>CP-1023</td>
+                                    <td>Today</td>
+                                    <td><span class="status status-progress">In progress</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="patient-cell">
+                                            <span class="patient-avatar">MR</span>
+                                            <span class="patient-details">
+                                                <strong>Michael Reed</strong>
+                                                <small>Male · 52 years</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>CP-1022</td>
+                                    <td>Yesterday</td>
+                                    <td><span class="status status-completed">Completed</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <div class="patient-cell">
+                                            <span class="patient-avatar">SP</span>
+                                            <span class="patient-details">
+                                                <strong>Sophia Patel</strong>
+                                                <small>Female · 41 years</small>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>CP-1021</td>
+                                    <td>Yesterday</td>
+                                    <td><span class="status status-cancelled">Cancelled</span></td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        <p class="empty-state" id="patient-empty" hidden>
+                            No patients found.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Today's Schedule -->
+
+                <section class="panel schedule-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h2>Today's Schedule</h2>
+                            <p>Upcoming appointments</p>
+                        </div>
+
+                        <a href="appointments.html">
+                            Full schedule →
+                        </a>
+
+                    </div>
+
+
+                    <div class="appointment-list" id="appointment-list">
+
+                        <article class="appointment">
+
+                            <span class="appointment-time">09:30 AM</span>
+                            <span class="appointment-mark"></span>
+
+                            <span class="appointment-info">
+                                <strong>James Davis</strong>
+                                <span>General Consultation · Dr. Morgan</span>
+                            </span>
+
+                            <span class="appointment-status">Arrived</span>
+
+                        </article>
+
+
+                        <article class="appointment">
+
+                            <span class="appointment-time">10:15 AM</span>
+                            <span class="appointment-mark"></span>
+
+                            <span class="appointment-info">
+                                <strong>Emma Wilson</strong>
+                                <span>Follow-up · Dr. Morgan</span>
+                            </span>
+
+                            <span class="appointment-status">In room</span>
+
+                        </article>
+
+
+                        <article class="appointment">
+
+                            <span class="appointment-time">11:00 AM</span>
+                            <span class="appointment-mark"></span>
+
+                            <span class="appointment-info">
+                                <strong>Oliver Brown</strong>
+                                <span>Routine Checkup · Dr. Chen</span>
+                            </span>
+
+                            <span class="appointment-status">Upcoming</span>
+
+                        </article>
+
+
+                        <article class="appointment">
+
+                            <span class="appointment-time">11:45 AM</span>
+                            <span class="appointment-mark"></span>
+
+                            <span class="appointment-info">
+                                <strong>Ava Thompson</strong>
+                                <span>Dental Consultation · Dr. Lee</span>
+                            </span>
+
+                            <span class="appointment-status">Upcoming</span>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- Quick Actions -->
+
+            <div class="quick-actions">
+
+                <button class="quick-action" id="add-patient" type="button">
+                    <span>＋</span>
+                    <span>Create a patient profile</span>
+                </button>
+
+                <button class="quick-action" id="add-appointment" type="button">
+                    <span>▣</span>
+                    <span>Manage clinic bookings</span>
+                </button>
+
+                <button class="quick-action" id="add-record" type="button">
+                    <span>▤</span>
+                    <span>Review patient histories</span>
+                </button>
+
+            </div>
+
+            <p class="demo-note" id="action-message"></p>
+
+        </section>
+
+    </main>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

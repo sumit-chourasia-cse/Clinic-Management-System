@@ -1,0 +1,204 @@
+/* Small summary cards add a quick view of the record collection. */
+.directory {
+    margin-top: 45px;
+}
+
+.record-summary {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.summary-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 190px;
+    padding: 14px 17px;
+    border: 1px solid #e1e9f2;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.summary-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    color: #347fe9;
+    background: #eaf3ff;
+    font-size: 20px;
+}
+
+.summary-card div {
+    display: grid;
+    gap: 2px;
+}
+
+.summary-card strong {
+    color: #203756;
+    font-size: 19px;
+}
+
+.summary-card div span {
+    color: #8193ae;
+    font-size: 11px;
+}
+
+.privacy-note {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 0 auto;
+    color: #8193ae;
+    font-size: 11px;
+}
+
+.privacy-note span {
+    color: #21a47c;
+    font-size: 8px;
+}
+
+.filters {
+    margin: 22px 0;
+}
+
+.filters input {
+    width: 280px;
+}
+
+.filters select {
+    width: 210px;
+}
+
+.records-card {
+    min-height: 266px;
+}
+
+.records-card.has-records .empty-records {
+    display: none;
+}
+
+.empty-records {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    min-height: 264px;
+    padding: 28px;
+    text-align: center;
+}
+
+.empty-records[hidden] {
+    display: none;
+}
+
+.empty-icon {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 12px;
+    border-radius: 15px;
+    color: #347fe9;
+    background: #eaf3ff;
+    font-size: 24px;
+}
+
+.empty-records h2 {
+    margin: 0 0 7px;
+    color: #203756;
+    font-size: 17px;
+}
+
+.empty-records p {
+    max-width: 510px;
+    margin: 0 0 17px;
+    color: #8193ae;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.browse-button {
+    padding: 11px 17px;
+    border-radius: 11px;
+    color: #fff;
+    background: #2879ef;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.browse-button:hover {
+    background: #1768dc;
+}
+
+.record-patient {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 175px;
+}
+
+.record-patient strong {
+    color: #203756;
+    font-size: 13px;
+}
+
+.record-type {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 8px;
+    color: #347fe9;
+    background: #eaf3ff;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.record-summary-text {
+    display: block;
+    max-width: 360px;
+    overflow: hidden;
+    color: #627792;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 700px) {
+    .directory {
+        margin-top: 30px;
+    }
+
+    .directory-heading {
+        align-items: flex-start;
+    }
+
+    .add-button {
+        flex: 0 0 auto;
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+
+    .record-summary {
+        flex-wrap: wrap;
+    }
+
+    .summary-card {
+        flex: 1;
+        min-width: 145px;
+    }
+
+    .privacy-note {
+        flex-basis: 100%;
+        margin: 2px 0 0;
+    }
+
+    .filters input {
+        flex: 1;
+        width: auto;
+    }
+
+    .filters select {
+        width: 160px;
+    }
+}

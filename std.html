@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Staff & Doctors | CarePoint</title>
+
+    <script src="https://kit.fontawesome.com/81babe2812.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="patients.css">
+    <link rel="stylesheet" href="std.css">
+</head>
+
+<body>
+
+    <aside class="navigation">
+
+        <a class="logo" href="dashboard.html">
+            <img src="Glossy Blue Medical Cross Logo (1).png" alt="CarePoint">
+            <span>CarePoint</span>
+        </a>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Workspace</h2>
+
+            <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-table-cells"></i>Dashboard</a>
+
+            <a class="nav-link" href="patient.html"><i class="fa-solid fa-user"></i>Patients <span class="nav-count" id="nav-patient-count">0</span></a>
+
+            <a class="nav-link" href="appointments.html"><i class="fa-solid fa-calendar"></i>Appointments</a>
+
+            <a class="nav-link" href="med-records.html"><i class="fa-solid fa-user-doctor"></i>Medical Records</a>
+
+            <a class="nav-link" href="schedules.html"><i class="fa-solid fa-calendar-days"></i>Schedules</a>
+        </nav>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Management</h2>
+
+            <a class="nav-link active" href="std.html"><i class="fa-solid fa-user-nurse"></i>Staff & Doctors</a>
+
+            <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-pie"></i>Reports</a>
+
+            <a class="nav-link" href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a>
+        </nav>
+
+
+
+    </aside>
+
+
+    <main class="page-main">
+
+        <header class="page-header">
+
+            <div>
+                <p class="breadcrumb">Workspace <span>/</span> <strong>Staff & Doctors</strong></p>
+                <h1>Staff & Doctors</h1>
+            </div>
+
+            <div class="header-right">
+
+                <label class="global-search">
+                    <span>⌕</span>
+                    <input id="staff-search" type="search" placeholder="Search team members...">
+                </label>
+
+                <div class="profile-avatar" id="user-initials">CP</div>
+
+                <div class="profile-name">
+                    <strong id="user-name">Clinic User</strong>
+                    <span>Clinic Administrator</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="directory">
+
+            <div class="directory-heading">
+
+                <div>
+                    <h2>Staff & Doctors</h2>
+                    <p>Clinic team and role-based access overview</p>
+                </div>
+
+                <button class="add-button" id="invite-staff" type="button">＋ Invite Staff</button>
+
+            </div>
+
+
+            <div class="staff-summary">
+
+                <article class="staff-summary-card">
+                    <span class="staff-icon blue">♙</span>
+                    <div>
+                        <strong id="team-count">0</strong>
+                        <span>Team members</span>
+                    </div>
+                </article>
+
+                <article class="staff-summary-card">
+                    <span class="staff-icon green">✚</span>
+                    <div>
+                        <strong id="doctor-count">0</strong>
+                        <span>Doctors</span>
+                    </div>
+                </article>
+
+                <article class="staff-summary-card">
+                    <span class="staff-icon orange">◷</span>
+                    <div>
+                        <strong id="available-count">0</strong>
+                        <span>Available today</span>
+                    </div>
+                </article>
+
+            </div>
+
+
+            <div class="filters">
+
+                <select id="role-filter">
+                    <option value="all">All roles</option>
+                    <option value="doctor">Doctors</option>
+                    <option value="nurse">Nurses</option>
+                    <option value="administrator">Administrators</option>
+                    <option value="receptionist">Receptionists</option>
+                </select>
+
+                <select id="availability-filter">
+                    <option value="all">Any availability</option>
+                    <option value="available">Available</option>
+                    <option value="in clinic">In clinic</option>
+                    <option value="off duty">Off duty</option>
+                </select>
+
+            </div>
+
+
+            <div class="table-card">
+
+                <div class="table-scroll">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team Member</th>
+                                <th>Role</th>
+                                <th>Department</th>
+                                <th>Email</th>
+                                <th>Availability</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="staff-list"></tbody>
+                    </table>
+
+                </div>
+
+                <p class="empty-message" id="empty-message" hidden>
+                    No team members match your search.
+                </p>
+
+            </div>
+
+            <p class="page-message" id="page-message"></p>
+
+        </section>
+
+    </main>
+
+    <script src="std.js" defer></script>
+
+</body>
+</html>

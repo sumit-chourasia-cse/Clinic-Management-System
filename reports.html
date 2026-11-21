@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | CarePoint</title>
+
+    <script src="https://kit.fontawesome.com/81babe2812.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="patients.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+
+<body>
+
+    <aside class="navigation">
+
+        <a class="logo" href="dashboard.html">
+            <img src="Glossy Blue Medical Cross Logo (1).png" alt="CarePoint">
+            <span>CarePoint</span>
+        </a>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Workspace</h2>
+
+            <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-table-cells"></i>Dashboard</a>
+
+            <a class="nav-link" href="patient.html"><i class="fa-solid fa-user"></i>Patients <span class="nav-count" id="nav-patient-count">0</span></a>
+
+            <a class="nav-link" href="appointments.html"><i class="fa-solid fa-calendar"></i>Appointments</a>
+
+            <a class="nav-link" href="med-records.html"><i class="fa-solid fa-user-doctor"></i>Medical Records</a>
+
+            <a class="nav-link" href="schedules.html"><i class="fa-solid fa-calendar-days"></i>Schedules</a>
+        </nav>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Management</h2>
+
+            <a class="nav-link" href="std.html"><i class="fa-solid fa-user-nurse"></i>Staff & Doctors</a>
+
+            <a class="nav-link active" href="reports.html"><i class="fa-solid fa-chart-pie"></i>Reports</a>
+
+            <a class="nav-link" href="settings.html"><i class="fa-solid fa-gear"></i>Settings</a>
+        </nav>
+
+
+
+    </aside>
+
+
+    <main class="page-main">
+
+        <header class="page-header">
+
+            <div>
+                <p class="breadcrumb">Workspace <span>/</span> <strong>Reports</strong></p>
+                <h1>Reports</h1>
+            </div>
+
+            <div class="header-right">
+
+                <label class="global-search">
+                    <span>⌕</span>
+                    <input id="report-search" type="search" placeholder="Search patients, records...">
+                </label>
+
+                <div class="profile-avatar" id="user-initials">CP</div>
+
+                <div class="profile-name">
+                    <strong id="user-name">Clinic User</strong>
+                    <span>Clinic Administrator</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="directory">
+
+            <div class="directory-heading">
+
+                <div>
+                    <h2>Clinic Reports</h2>
+                    <p>Activity summaries and patient progress</p>
+                </div>
+
+                <button class="add-button" id="export-report" type="button">Export Report ↓</button>
+
+            </div>
+
+
+            <div class="report-cards">
+
+                <article class="report-card">
+                    <div class="report-card-top">
+                        <span>Total Patients</span>
+                        <span class="report-icon blue">♙</span>
+                    </div>
+                    <strong id="patient-total">0</strong>
+                    <p>Patient profiles in your clinic</p>
+                </article>
+
+                <article class="report-card">
+                    <div class="report-card-top">
+                        <span>Appointments</span>
+                        <span class="report-icon green">▣</span>
+                    </div>
+                    <strong id="appointment-total">0</strong>
+                    <p>Bookings in your schedule</p>
+                </article>
+
+                <article class="report-card">
+                    <div class="report-card-top">
+                        <span>Completed Visits</span>
+                        <span class="report-icon purple">✓</span>
+                    </div>
+                    <strong id="completed-total">0</strong>
+                    <p>Visits marked complete</p>
+                </article>
+
+                <article class="report-card">
+                    <div class="report-card-top">
+                        <span>Follow-ups</span>
+                        <span class="report-icon orange">◷</span>
+                    </div>
+                    <strong id="followup-total">0</strong>
+                    <p>Patients needing follow-up</p>
+                </article>
+
+            </div>
+
+
+            <div class="reports-grid">
+
+                <section class="report-panel">
+
+                    <div class="report-panel-heading">
+                        <div>
+                            <h2>Appointment Overview</h2>
+                            <p>Bookings grouped by current status</p>
+                        </div>
+
+                        <span class="panel-mark">This clinic</span>
+                    </div>
+
+                    <div class="status-chart" id="status-chart"></div>
+
+                </section>
+
+
+                <section class="report-panel patient-report-panel">
+
+                    <div class="report-panel-heading">
+                        <div>
+                            <h2>Patient Snapshot</h2>
+                            <p>Recent patients and their visit status</p>
+                        </div>
+
+                        <a href="patient.html">View directory →</a>
+                    </div>
+
+                    <div class="table-scroll">
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Patient</th>
+                                    <th>Last Visit</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="patient-report-list"></tbody>
+                        </table>
+
+                    </div>
+
+                    <p class="empty-message" id="empty-report" hidden>
+                        No patient data is available yet.
+                    </p>
+
+                </section>
+
+            </div>
+
+            <p class="page-message" id="page-message"></p>
+
+        </section>
+
+    </main>
+
+    <script src="reports.js" defer></script>
+
+</body>
+</html>

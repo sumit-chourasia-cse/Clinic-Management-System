@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Schedules | CarePoint</title>
+
+    <script src="https://kit.fontawesome.com/81babe2812.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="patients.css">
+    <link rel="stylesheet" href="schedules.css">
+</head>
+
+<body>
+
+    <aside class="navigation">
+
+        <a class="logo" href="dashboard.html">
+            <img src="Glossy Blue Medical Cross Logo (1).png" alt="CarePoint medical cross">
+            <span>CarePoint</span>
+        </a>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Workspace</h2>
+
+            <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-table-cells"></i>Dashboard
+            </a>
+
+            <a class="nav-link" href="patient.html">
+                <i class="fa-solid fa-user"></i>Patients
+                <span class="nav-count" id="nav-patient-count">0</span>
+            </a>
+
+            <a class="nav-link" href="appointments.html">
+                <i class="fa-solid fa-calendar"></i>Appointments
+            </a>
+
+            <a class="nav-link" href="med-records.html">
+                <i class="fa-solid fa-user-doctor"></i>Medical Records
+            </a>
+
+            <a class="nav-link active" href="schedules.html">
+                <i class="fa-solid fa-calendar-days"></i>Schedules
+            </a>
+        </nav>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Management</h2>
+
+            <a class="nav-link" href="std.html">
+                <i class="fa-solid fa-user-nurse"></i>Staff &amp; Doctors
+            </a>
+
+            <a class="nav-link" href="reports.html">
+                <i class="fa-solid fa-chart-pie"></i>Reports
+            </a>
+
+            <a class="nav-link" href="settings.html">
+                <i class="fa-solid fa-gear"></i>Settings
+            </a>
+        </nav>
+
+
+    </aside>
+
+    <main class="page-main">
+
+        <header class="page-header">
+
+            <div>
+                <p class="breadcrumb">
+                    Workspace <span>/</span> <strong>Schedules</strong>
+                </p>
+                <h1>Schedules</h1>
+            </div>
+
+            <div class="header-right">
+
+                <label class="global-search">
+                    <span>⌕</span>
+                    <input id="schedule-search" type="search" placeholder="Search doctors, rooms...">
+                </label>
+
+                <div class="profile-avatar" id="user-initials">CP</div>
+
+                <div class="profile-name">
+                    <strong id="user-name">Clinic User</strong>
+                    <span>Clinic Administrator</span>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section class="directory">
+
+            <div class="directory-heading">
+
+                <div>
+                    <h2 id="schedule-title">Clinic Schedule</h2>
+                    <p>Daily doctor availability and appointment timeline</p>
+                </div>
+
+                <button class="add-button" id="add-schedule" type="button">
+                    ＋ Add Schedule
+                </button>
+
+            </div>
+
+            <div class="schedule-filters">
+
+                <input id="schedule-date" type="date">
+
+                <select id="doctor-filter">
+                    <option value="all">All doctors</option>
+                </select>
+
+            </div>
+
+            <div class="timeline-card">
+
+                <div id="schedule-list" class="schedule-list"></div>
+
+                <div class="empty-schedule" id="empty-schedule" hidden>
+                    <div class="empty-icon">◷</div>
+                    <h2>No schedules for this day</h2>
+                    <p>Add a doctor schedule to start planning the clinic day.</p>
+                </div>
+
+            </div>
+
+            <p class="page-message" id="page-message"></p>
+
+        </section>
+
+    </main>
+
+    <script src="schedules.js" defer></script>
+
+</body>
+</html>

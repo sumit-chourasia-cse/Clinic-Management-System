@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Medical Records | CarePoint</title>
+
+    <script src="https://kit.fontawesome.com/81babe2812.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="patients.css">
+    <link rel="stylesheet" href="med-records.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="navigation">
+
+        <a class="logo" href="dashboard.html">
+            <img src="Glossy Blue Medical Cross Logo (1).png" alt="CarePoint">
+            <span>CarePoint</span>
+        </a>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Workspace</h2>
+
+            <a class="nav-link" href="dashboard.html">
+                <i class="fa-solid fa-table-cells"></i>
+                Dashboard
+            </a>
+
+            <a class="nav-link" href="patient.html">
+                <i class="fa-solid fa-user"></i>
+                Patients
+                <span class="nav-count" id="nav-patient-count">0</span>
+            </a>
+
+            <a class="nav-link" href="appointments.html">
+                <i class="fa-solid fa-calendar"></i>
+                Appointments
+            </a>
+
+            <a class="nav-link active" href="med-records.html">
+                <i class="fa-solid fa-user-doctor"></i>
+                Medical Records
+            </a>
+
+            <a class="nav-link" href="schedules.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                Schedules
+            </a>
+        </nav>
+
+        <nav class="nav-title">
+            <h2 class="nav-heading">Management</h2>
+
+            <a class="nav-link" href="std.html">
+                <i class="fa-solid fa-user-nurse"></i>
+                Staff &amp; Doctors
+            </a>
+
+            <a class="nav-link" href="reports.html">
+                <i class="fa-solid fa-chart-pie"></i>
+                Reports
+            </a>
+
+            <a class="nav-link" href="settings.html">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </nav>
+
+
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="page-main">
+
+        <header class="page-header">
+
+            <div>
+                <p class="breadcrumb">
+                    Workspace <span>/</span> <strong>Medical Records</strong>
+                </p>
+                <h1>Medical Records</h1>
+            </div>
+
+            <div class="header-right">
+
+                <label class="global-search">
+                    <span>⌕</span>
+                    <input id="global-search" type="search" placeholder="Search patients, records...">
+                </label>
+
+                <div class="profile-avatar" id="user-initials">CP</div>
+
+                <div class="profile-name">
+                    <strong id="user-name">Clinic User</strong>
+                    <span>Clinic Administrator</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Medical Records -->
+        <section class="directory">
+
+            <div class="directory-heading">
+
+                <div>
+                    <h2 id="records-title">Medical Records</h2>
+                    <p>Patient histories, diagnoses, and treatment notes</p>
+                </div>
+
+                <button class="add-button" id="add-record" type="button">
+                    ＋ Add Record
+                </button>
+
+            </div>
+
+
+            <!-- Record Summary -->
+            <div class="record-summary">
+
+                <article class="summary-card">
+                    <span class="summary-icon">▤</span>
+                    <div>
+                        <strong id="record-count">0</strong>
+                        <span>Total records</span>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <span class="summary-icon">♙</span>
+                    <div>
+                        <strong id="linked-patient-count">0</strong>
+                        <span>Patients with records</span>
+                    </div>
+                </article>
+
+                <p class="privacy-note">
+                    <span>●</span>
+                    Records are saved in this browser for this account.
+                </p>
+
+            </div>
+
+
+            <!-- Search and Filter -->
+            <div class="filters">
+
+                <input id="record-search" type="search" placeholder="Search records...">
+
+                <select id="record-type-filter">
+                    <option value="all">All record types</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="diagnosis">Diagnosis</option>
+                    <option value="prescription">Prescription</option>
+                    <option value="lab results">Lab results</option>
+                </select>
+
+            </div>
+
+
+            <!-- Records Table -->
+            <div class="table-card records-card" id="records-card">
+
+                <div class="table-scroll">
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Record Type</th>
+                                <th>Summary</th>
+                                <th>Date</th>
+                                <th>Doctor</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="record-list"></tbody>
+                    </table>
+
+                </div>
+
+                <div class="empty-records" id="empty-records">
+
+                    <div class="empty-icon">▤</div>
+
+                    <h2>No medical records yet</h2>
+
+                    <p>
+                        Select a patient from the directory to view their medical record,
+                        or add a new record.
+                    </p>
+
+                    <a class="browse-button" href="patients.html">Browse Patients</a>
+
+                </div>
+
+            </div>
+
+            <p class="page-message" id="page-message"></p>
+
+        </section>
+
+    </main>
+
+    <script src="med-records.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | CarePoint</title>
+    <script src="https://kit.fontawesome.com/81babe2812.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="patients.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <!-- This sidebar is shared with the other CarePoint pages. -->
+    <aside class="navigation">
+        <a class="logo" href="dashboard.html">
+            <img src="Glossy Blue Medical Cross Logo (1).png" alt="CarePoint medical cross">
+            <span>CarePoint</span>
+        </a>
+
+        <nav class="nav-title" aria-label="Workspace">
+            <h2 class="nav-heading">Workspace</h2>
+            <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-table-cells"></i>Dashboard</a>
+            <a class="nav-link" href="patient.html"><i class="fa-solid fa-user"></i>Patients <span class="nav-count" id="nav-patient-count">0</span></a>
+            <a class="nav-link" href="appointments.html"><i class="fa-solid fa-calendar"></i>Appointments</a>
+            <a class="nav-link" href="med-records.html"><i class="fa-solid fa-user-doctor"></i>Medical Records</a>
+            <a class="nav-link" href="schedules.html"><i class="fa-solid fa-calendar-days"></i>Schedules</a>
+        </nav>
+
+        <nav class="nav-title" aria-label="Management">
+            <h2 class="nav-heading">Management</h2>
+            <a class="nav-link" href="std.html"><i class="fa-solid fa-user-nurse"></i>Staff &amp; Doctors</a>
+            <a class="nav-link" href="reports.html"><i class="fa-solid fa-chart-pie"></i>Reports</a>
+            <a class="nav-link active" href="settings.html" aria-current="page"><i class="fa-solid fa-gear"></i>Settings</a>
+        </nav>
+
+    </aside>
+
+    <main class="page-main">
+        <header class="page-header">
+            <div>
+                <p class="breadcrumb">Management <span>/</span> <strong>Settings</strong></p>
+                <h1>Settings</h1>
+            </div>
+            <div class="header-right">
+                <div class="profile-avatar" id="user-initials">CP</div>
+                <div class="profile-name"><strong id="header-user-name">Clinic User</strong><span>Clinic Administrator</span></div>
+            </div>
+        </header>
+
+        <section class="settings-page" aria-label="Account settings">
+            <div class="settings-intro">
+                <h2>Your account</h2>
+                <p>View your profile details and manage your CarePoint preferences.</p>
+            </div>
+
+            <div class="settings-grid">
+                <section class="settings-card account-card" aria-labelledby="account-title">
+                    <div class="card-heading">
+                        <div><h2 id="account-title">Account information</h2><p>Your signed-in profile details</p></div>
+                        <span class="account-badge">Active account</span>
+                    </div>
+
+                    <div class="account-summary">
+                        <div class="large-avatar" id="account-initials">CP</div>
+                        <div><h3 id="account-name">Clinic User</h3><p id="account-role">Clinic Administrator</p></div>
+                    </div>
+
+                    <div class="account-fields">
+                        <div class="account-field"><span>Full name</span><strong id="account-name-field">Clinic User</strong></div>
+                        <div class="account-field"><span>Email address</span><strong id="account-email">user@example.com</strong></div>
+                        <div class="account-field"><span>Account role</span><strong>Clinic Administrator</strong></div>
+                    </div>
+                    <p class="account-note">Your profile information comes from the account you used to sign in.</p>
+                </section>
+
+                <div class="settings-side-column">
+                    <section class="settings-card preferences-card" aria-labelledby="preferences-title">
+                        <div class="card-heading"><div><h2 id="preferences-title">Preferences</h2><p>Choose what you want to see</p></div></div>
+                        <label class="preference-row"><span><strong>Appointment reminders</strong><small>Show reminders about upcoming visits</small></span><input id="appointment-reminders" type="checkbox"></label>
+                        <label class="preference-row"><span><strong>Weekly clinic summary</strong><small>Show a summary of clinic activity</small></span><input id="weekly-summary" type="checkbox"></label>
+                        <p class="preference-message" id="preference-message" role="status" aria-live="polite"></p>
+                    </section>
+
+                    <section class="settings-card session-card" aria-labelledby="session-title">
+                        <div class="card-heading"><div><h2 id="session-title">Sign-in session</h2><p>Manage access on this device</p></div></div>
+                        <p class="session-description"><span class="session-dot"></span>You are currently signed in to CarePoint.</p>
+                        <button class="logout-button" id="logout-button" type="button">Log Out</button>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="settings.js" defer></script>
+</body>
+</html>

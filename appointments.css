@@ -1,0 +1,108 @@
+/* Appointment page styles. The patients.css file supplies the shared sidebar and header. */
+.directory {
+    margin-top: 45px;
+}
+
+.filters {
+    margin-top: 28px;
+}
+
+.filters input {
+    width: 280px;
+}
+
+.filters select {
+    width: 180px;
+}
+
+th,
+td {
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.appointment-patient {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.appointment-patient strong {
+    color: #203756;
+    font-size: 13px;
+}
+
+.patient-initials {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 13px;
+    color: #347fe9;
+    background: #e8f2ff;
+    font-weight: 800;
+}
+
+.status {
+    min-width: 100px;
+    justify-content: center;
+}
+
+.status-confirmed,
+.status-completed {
+    color: #169c70;
+    background: #e7f7f1;
+}
+
+.status-waiting {
+    color: #d8891d;
+    background: #fff3e2;
+}
+
+.status-cancelled {
+    color: #df5969;
+    background: #ffedf0;
+}
+
+.status-upcoming {
+    color: #347fe9;
+    background: #eaf3ff;
+}
+
+.status-select {
+    min-width: 130px;
+    padding: 9px 10px;
+    border: 1px solid #dfe8f2;
+    border-radius: 9px;
+    color: #526984;
+    background: #fff;
+    font: inherit;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .directory {
+        margin-top: 30px;
+    }
+
+    .directory-heading {
+        align-items: flex-start;
+    }
+
+    .add-button {
+        flex: 0 0 auto;
+        padding: 11px 13px;
+        font-size: 12px;
+    }
+
+    .filters input {
+        flex: 1;
+        width: auto;
+    }
+
+    .filters select {
+        width: 145px;
+    }
+}

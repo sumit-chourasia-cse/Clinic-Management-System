@@ -1,0 +1,216 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Open Sans", Arial, sans-serif;
+    background: #d8eaff url("Background Text Colors Identification.png") center / cover no-repeat;
+    color: #101827;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 40px 6%;
+    position: relative;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand span {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.intro {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    width: 40%;
+}
+
+.intro h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 0;
+    font-weight: 800;
+}
+
+.intro h1 span {
+    color: #0868f7;
+}
+
+.line {
+    width: 90px;
+    height: 8px;
+    background: #0868f7;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #435a80;
+}
+
+.auth-card {
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    transform: translateY(-50%);
+    width: 420px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+}
+
+.tabs {
+    display: flex;
+    gap: 12px;
+}
+
+.tabs button {
+    width: 50%;
+    padding: 15px;
+    border: 2px solid #d8e4f8;
+    border-radius: 30px;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.tabs button.active {
+    background: #0868f7;
+    color: white;
+    border-color: #0868f7;
+}
+
+.card-heading {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.card-heading h2 {
+    font-size: 26px;
+    margin: 0 0 8px;
+}
+
+.card-heading p {
+    color: #435a80;
+    font-size: 14px;
+}
+
+#auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#auth-form input {
+    width: 100%;
+    padding: 17px;
+    border: 1px solid #d8e4f8;
+    border-radius: 30px;
+    background: transparent;
+    font-size: 15px;
+}
+
+#auth-form input:focus {
+    border-color: #0868f7;
+}
+
+#auth-form button {
+    padding: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #0868f7;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#auth-form button:hover {
+    background: #0758d8;
+}
+
+#message {
+    text-align: center;
+    font-size: 13px;
+    color: #b42318;
+}
+
+.switch-text {
+    text-align: center;
+    color: #435a80;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.switch-text button {
+    border: none;
+    background: none;
+    color: #0868f7;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 1020px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 25px 20px;
+    }
+
+    .brand {
+        align-self: center;
+    }
+
+    .intro {
+        position: static;
+        transform: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    .line {
+        margin: 20px auto;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    .auth-card {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 420px;
+    }
+}

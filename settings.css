@@ -1,0 +1,243 @@
+/* Settings page layout. The patients.css file provides the shared sidebar and header. */
+.settings-page {
+    max-width: 1150px;
+    margin: 42px auto 0;
+}
+
+.settings-intro {
+    margin-bottom: 20px;
+}
+
+.settings-intro h2 {
+    margin: 0 0 5px;
+    color: #203756;
+    font-size: 19px;
+}
+
+.settings-intro p {
+    margin: 0;
+    color: #8193ae;
+    font-size: 13px;
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+    align-items: start;
+    gap: 16px;
+}
+
+.settings-side-column {
+    display: grid;
+    gap: 16px;
+}
+
+.settings-card {
+    padding: 21px;
+    border: 1px solid #e1e9f2;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 24px #28486e06;
+}
+
+.card-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.card-heading h2 {
+    margin: 0 0 4px;
+    color: #203756;
+    font-size: 15px;
+}
+
+.card-heading p {
+    margin: 0;
+    color: #8193ae;
+    font-size: 11px;
+}
+
+.account-badge {
+    padding: 6px 9px;
+    border-radius: 8px;
+    color: #169c70;
+    background: #e7f7f1;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.account-summary {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 20px 0;
+}
+
+.large-avatar {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    color: #2879ef;
+    background: #e3efff;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.account-summary h3 {
+    margin: 0 0 4px;
+    color: #203756;
+    font-size: 16px;
+}
+
+.account-summary p {
+    margin: 0;
+    color: #8193ae;
+    font-size: 12px;
+}
+
+.account-fields {
+    display: grid;
+    gap: 0;
+    border: 1px solid #edf1f6;
+    border-radius: 12px;
+}
+
+.account-field {
+    display: grid;
+    gap: 5px;
+    padding: 13px 14px;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.account-field:last-child {
+    border-bottom: 0;
+}
+
+.account-field span {
+    color: #91a0b6;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.account-field strong {
+    overflow-wrap: anywhere;
+    color: #304968;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.account-note {
+    margin: 13px 0 0;
+    color: #91a0b6;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.preference-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf1f6;
+    cursor: pointer;
+}
+
+.preference-row:last-of-type {
+    border-bottom: 0;
+}
+
+.preference-row span {
+    display: grid;
+    gap: 4px;
+}
+
+.preference-row strong {
+    color: #304968;
+    font-size: 12px;
+}
+
+.preference-row small {
+    color: #91a0b6;
+    font-size: 10px;
+}
+
+.preference-row input {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    accent-color: #2879ef;
+    cursor: pointer;
+}
+
+.preference-message {
+    min-height: 14px;
+    margin: 5px 0 0;
+    color: #169c70;
+    font-size: 10px;
+}
+
+.session-description {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 17px 0;
+    color: #71839f;
+    font-size: 11px;
+}
+
+.session-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #20aa7c;
+}
+
+.logout-button {
+    width: 100%;
+    min-height: 42px;
+    border: 1px solid #f1ccd0;
+    border-radius: 10px;
+    color: #ce4e5c;
+    background: #fff;
+    font: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    border-color: #e87582;
+    background: #fff5f6;
+}
+
+@media (max-width: 850px) {
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-side-column {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .settings-page {
+        margin-top: 28px;
+    }
+
+    .settings-side-column {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-card {
+        padding: 17px;
+    }
+}
